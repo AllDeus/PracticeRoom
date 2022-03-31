@@ -19,7 +19,7 @@ module.exports = function(passport) {
             lastName: profile.name.familyName,
             image: profile.photos[0].value
         }
-
+        // findone based on email address instead of userid
         try{
             let user = await User.findOne({googleId: profile.id})
             if(user){
