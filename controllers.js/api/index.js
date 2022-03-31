@@ -6,3 +6,4 @@ router.use('/auth', userRoutes);
 router.use('/posts', postRoutes);
 
 module.exports = router;
+
