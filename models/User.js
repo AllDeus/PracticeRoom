@@ -11,26 +11,27 @@ User.init({
         autoIncrement: true,
     },
     googleId: {
-        type: String,
+        type: DataTypes.STRING,
         allowNull: false,
 
     },
     displayName: {
-        type: String,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     firstName: {
-        type: String,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     lastName: {
-        type: String,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     image: {
-        type: String,
+        type: DataTypes.STRING,
     },
-
+    },
+    {
     sequelize, 
     timestamps: false,
     freezeTableName: true,
