@@ -26,24 +26,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Finds a blog post by its id so it can be rendered on a separate page if clicked on by user.
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['displayName'],
         },
       ],
     });
 
     const post = postData.get({ plain: true });
 
-    res.render('posts', {
-      ...post,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
+//     res.render('practiceRoom', {
+//       ...post,
+//       logged_in: req.session.logged_in
+//     });
+// Did this res.json for testing, but when its done we want to get rid of it and catch the above.
+res.json(post);
+   } catch (err) {
     res.status(500).json(err);
   }
 });
