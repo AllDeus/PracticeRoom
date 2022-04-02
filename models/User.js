@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class User extends Model {}
-
+// temporarily allow null?
 User.init({
     id: {
         type: DataTypes.INTEGER,

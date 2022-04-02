@@ -20,6 +20,7 @@ module.exports = function(passport) {
             image: profile.photos[0].value
         }
         // findone based on email address instead of userid
+        // https://www.googleapis.com/discovery/v1/apis/oauth2/v2/rest?fields=auth(oauth2(scopes))
         try{
             let user = await User.findOne({googleId: profile.id})
             if(user){

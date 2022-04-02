@@ -4,7 +4,7 @@ const passport = require('passport')
 
 // authenticate with google - GET route =  auth/google
 // scope - includes what we want to retrieve from user profile
-router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
+router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
 
 // get route - auth/google/callback
 // ensure user is authenticated through google
