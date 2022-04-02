@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Posts a blogpost and assigns it to the user's id.
+// Posts a blogpost
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
