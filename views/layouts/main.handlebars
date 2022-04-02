@@ -1,1 +1,82 @@
-[]
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Group Project</title>
+</head>
+
+<div class="wrapper">
+    <div class="navbar">
+        <div class="logo">
+
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li class="nr_li dd_main">
+                    <i class="fa fa-home"></i></a>
+                    <alt> Menu</alt>
+
+                    <div class="dd_menu">
+                        <div class="dd_left">
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i></li>
+                                <li><i class="far fa-star"></i></li>
+                                <li><i class="far fa-plus-square"></i></li>
+                                <li><i class="fas fa-cog"></i></li>
+                                <li><i class="fas fa-sign-out-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="dd_right">
+                            ul>
+                <li class="nav-item"><a href="/"></a>Home</li>
+                <li class="nav-item"><a href="/discussion"></a>Discussion</li>
+                <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
+                {{#if loggedIn}}
+                <a class="link" href="/" id="logout">Logout</a>
+                {{else}}
+                <a class="link" href="/login">Login</a>
+                {{/if}}
+
+                <li class="nav-item"><a href="/"></a>Settings</li>
+                <li class="nav-item"><a href="/login"></a>Login</li>
+            </ul>
+        </div>
+    </div>
+    </li>
+    <li class="nr_li">
+
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </li>
+    </ul>
+</div>
+</div>
+<h1 class="app-title"><i class="fab "></i>Group Project</h1>
+</header>
+<main>
+    {{{ body }}}
+</main>
+</div>
+
+<script>
+    var dd_main = document.querySelector(".dd_main");
+
+    dd_main.addEventListener("click", function () {
+        this.classList.toggle("active");
+    })
+</script>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+
+</body>
+
+</html>
