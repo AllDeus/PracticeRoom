@@ -3,7 +3,7 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Posts a blogpost and assigns it to the user's id.
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newPost = await Post.create({
       ...req.body,
@@ -18,7 +18,7 @@ router.post('/', withAuth, async (req, res) => {
 
 
 // Deletes the blog post with the specified ID.
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const blogpostData = await Post.destroy({
       where: {
