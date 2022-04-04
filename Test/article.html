@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="post.css">
+
+    <title>Article</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Practice Room</a>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li class="nr_li dd_main">
+                        <i class="fa fa-home"></i></a>
+                        <alt> Menu</alt>
+
+                        <div class="dd_menu">
+                            <div class="dd_left">
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                    <li><i class="far fa-plus-square"></i></li>
+                                    <li><i class="fas fa-cog"></i></li>
+                                    <li><i class="fas fa-sign-out-alt"></i></li>
+                                </ul>
+                            </div>
+                            <div class="dd_right">
+                                <ul>
+                                    <li class="nav-item"><a href="/"></a>Home</li>
+                                    <li class="nav-item"><a href="blog.html"></a>Discussion</li>
+                                    <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
+                                    <li class="nav-item"><a href="/"></a>SignUp</li>
+                                    <li class="nav-item"><a href="/login"></a>Login</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nr_li">
+
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="blog">
+        <h1 class="title">Title of article</h1>
+        <p class="published"><span>published at - </span></p>
+        <div class="article">
+
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="post-comments py-2">
+            <h3 class="text-center display-1 secondary-title py-2"> Comments</h3>
+
+            <div class="comment-details">
+                <div class="comment-item py-2">
+                    <div class="d-flex">
+                        <div class="avatar px-2">
+                            <img src="" class="rounded" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <h5 class="display-2 m-0">Brandon Kelley</h5>
+                            <p class="title-secondary text-dark">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore aliqua. Quis ipsum suspendisse ultrices gravida lacus vel
+                                facilisis.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- comment reply -->
+                    <div class="reply py-2">
+                        <div class="d-flex">
+                            <div class="avatar px-2">
+                                <img src="./assets/face/face2.jpg" class="rounded" alt="">
+                            </div>
+                            <div class="comment-content">
+                                <h5 class="display-2 m-0">Comment name</h5>
+                                <p class="title-secondary text-dark">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore aliqua. Quis ipsum suspendisse ultrices gravida
+                                    lacus vel facilisis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="comment-item py-2">
+                    <div class="d-flex">
+                        <div class="avatar px-2">
+                            <img src="./assets/face/face3.jpg" class="rounded" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <h5 class="display-2 m-0">comment name</h5>
+                            <p class="title-secondary text-dark">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore aliqua. Quis ipsum suspendisse ultrices gravida lacus vel
+                                facilisis.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-center display-1 secondary-title py-2">Leave Comment</h3>
+
+            <div class="comment-form">
+                <div class="d-flex justify-content-between flex-wrap">
+                    <input type="text" class="form-control " placeholder="Name">
+                    <input type="email" class="form-control" placeholder="Email">
+
+                </div>
+                <textarea class="form-control mt-3" placeholder="Message" rows="10"></textarea>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary display-2 text-light mt-2">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <script>
+        var dd_main = document.querySelector(".dd_main");
+
+        dd_main.addEventListener("click", function () {
+            this.classList.toggle("active");
+        })
+    </script>
+
+    <!-- masonry libray for horizontal grid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+        integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- swiper slider cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+        integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+        crossorigin="anonymous"></script>
+
+    <!-- custom javascript main.js file -->
+    <script src="main.js"></script>
+</body>
+
+</html>

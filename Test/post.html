@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="post.css">
+    <title>post</title>
+</head>
+
+<div class="wrapper">
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Practice Room</a>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li class="nr_li dd_main">
+                    <i class="fa fa-home"></i></a>
+                    <alt> Menu</alt>
+
+                    <div class="dd_menu">
+                        <div class="dd_left">
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i></li>
+                                <li><i class="far fa-star"></i></li>
+                                <li><i class="far fa-plus-square"></i></li>
+                                <li><i class="fas fa-cog"></i></li>
+                                <li><i class="fas fa-sign-out-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="dd_right">
+                            <ul>
+                                <li class="nav-item"><a href="/"></a>Home</li>
+                                <li class="nav-item"><a href="blog.html"></a>Discussion</li>
+                                <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
+                                <li class="nav-item"><a href="/"></a>SignUp</li>
+                                <li class="nav-item"><a href="/login"></a>Login</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nr_li">
+
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="blog">
+    <textarea type="text" class="title" placeholder="Blog title..."></textarea>
+    <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+</div>
+
+<div class="blog-options">
+    <button class="btn dark publish-btn">publish</button>
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+</div>
+
+
+
+<script>
+    var dd_main = document.querySelector(".dd_main");
+
+    dd_main.addEventListener("click", function () {
+        this.classList.toggle("active");
+    })
+</script>
+
+</body>
+
+</html>
