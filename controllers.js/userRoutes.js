@@ -4,7 +4,6 @@ const passport = require('passport');
 var LocalStrategy = require('passport-local');
 const { User } = require('../models');
 
-
 // authenticate with google - GET route =  auth/google
 // scope - includes what we want to retrieve from user profile
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
@@ -35,7 +34,6 @@ router.post('/signup', (req, res) => {
     }
 
 })
-
 
 // /auth/login
 router.post('/login', passport.authenticate('local', {
