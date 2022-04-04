@@ -20,7 +20,6 @@
 }
 
 
-
 /* nav */
 .navbar {
     background: #070707;
@@ -136,7 +135,7 @@ section {
 }
 
 button {
-    background: #25cdf7 !important;
+    background: #112dcf !important;
     color: #e6e4e3 !important;
 }
 
@@ -247,6 +246,110 @@ input {
 .events .location {
 
     display: none !important;
+}
+
+/* card */
+.songCard {
+
+    border-radius: 4px;
+    text-align: center;
+    height: 600px;
+    margin-top: 5%;
+    padding-top: 13%;
+    font-size: 28px;
+}
+
+.newSongCard {
+
+    background: black;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    height: 600px;
+    margin-top: 5%;
+    padding-top: 5%;
+    font-size: 28px;
+
+}
+
+.newSongCardGlow {
+
+    background: black;
+    color: white;
+    font-size: 48px;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 20px white;
+    transition: all 0.5s ease-in;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    padding-top: 5%;
+    height: 600px;
+
+}
+
+/* buttons */
+.songButton {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.noSongButton {
+    display: none;
+}
+
+.continueButton {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* text */
+.showSongInfo {
+    display: block;
+    background: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.textInfo {
+
+
+    font-size: 48px;
+    font-weight: bold;
+
+}
+
+/* icon */
+.svgDiv {
+    display: none;
+
+}
+
+.svgNewDiv {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.iconDiv {
+    display: none;
+
+}
+
+.iconNewDiv {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /* --------------- Media Queries --------------- */
