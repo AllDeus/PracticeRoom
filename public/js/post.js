@@ -7,7 +7,7 @@ const handlePost = async (event) => {
     if (title && postContent) {
 
         // add route
-        const response = await fetch('/', {
+        const response = await fetch('/api/posts', {
             method: 'POST',
             body: JSON.stringify({ title, postContent }),
             headers: { 'Content-Type': 'application/json' },
@@ -29,7 +29,7 @@ const handleComment = async (event) => {
 
     if (commentContent.ok) {
         // add route
-        const response = await fetch('/', {
+        const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({ commentContent }),
             headers: { 'Content-Type': 'application/json' },
@@ -44,6 +44,24 @@ const handleComment = async (event) => {
     }
 };
 
+const delButtonHandler = async (event) => {
+    // TODO: data-id comes from handlebars-- make it post.name or something
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        // TODO: might adjust homepage depending on handlebars
+        document.location.replace('/homepage');
+      } else {
+        alert('Failed to delete project');
+      }
+    }
+  };
+
 
 document
     .querySelector('.postForm')
@@ -52,3 +70,8 @@ document
 document
     .querySelector('.commentForm')
     .addEventListener('submit', handleComment);
+
+document
+// TODO: .project-list needs to be changed
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);
