@@ -12,21 +12,21 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({});
 
 
 const sess = {
- secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET,
   cookie: {
-     maxAge: 360000,
-      httpOnly: true,
-     secure: false,
-      sameSite: 'strict',
- },
+    maxAge: 360000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
- store: new SequelizeStore({
-     db: sequelize
+  store: new SequelizeStore({
+    db: sequelize
   })
 };
 
@@ -34,8 +34,8 @@ const sess = {
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 // set passport middleware
 app.use(passport.initialize());
