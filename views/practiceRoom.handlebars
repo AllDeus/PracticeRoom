@@ -1,13 +1,16 @@
-{{!-- <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div> --}}
+{{!-- TODO: change title to post --}}
+{{#each post as |post| }}
+<div class="row mb-4 post">
+  <div class="col-md-5">
+    <h2>
+      <a href="/posts/{{post.id}}">{{post.title}}</a>
+    </h2>
+    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{post.post_body}}
+    </p>
+  </div>
+</div>
+{{/each}}
