@@ -7,53 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <link rel="stylesheet" href="home.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{cssFile}}">
 
     <title>HomePage</title>
 </head>
 
-<div class="wrapper">
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">Practice Room</a>
-        </div>
-        <div class="nav_right">
-            <ul>
-                <li class="nr_li dd_main">
-                    <i class="fa fa-home"></i></a>
-                    <alt> Menu</alt>
 
-                    <div class="dd_menu">
-                        <div class="dd_left">
-                            <ul>
-                                <li><i class="fas fa-map-marker-alt"></i></li>
-                                <li><i class="far fa-star"></i></li>
-                                <li><i class="far fa-plus-square"></i></li>
-                                <li><i class="fas fa-cog"></i></li>
-                                <li><i class="fas fa-sign-out-alt"></i></li>
-                            </ul>
-                        </div>
-                        <div class="dd_right">
-                            <ul>
-                                <li class="nav-item"><a href="/"></a>Home</li>
-                                <li class="nav-item"><a href="blog.html"></a>Discussion</li>
-                                <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
-                                <li class="nav-item"><a href="/"></a>SignUp</li>
-                                <li class="nav-item"><a href="/login"></a>Login</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="nr_li">
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Practice Room</a>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li class="nr_li dd_main">
+                        <i class="fa fa-home"></i></a>
+                        <alt> Menu</alt>
 
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+                        <div class="dd_menu">
+                            <div class="dd_left">
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                    <li><i class="far fa-plus-square"></i></li>
+                                    <li><i class="fas fa-cog"></i></li>
+                                    <li><i class="fas fa-sign-out-alt"></i></li>
+                                </ul>
+                            </div>
+                            <div class="dd_right">
+                                <ul>
+                                    <li class="nav-item"><a href="/"></a>Home</li>
+                                    <li class="nav-item"><a href="blog.html"></a>Discussion</li>
+                                    <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
+                                    <li class="nav-item"><a href="/"></a>SignUp</li>
+                                    <li class="nav-item"><a href="/login"></a>Login</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nr_li">
+
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<body>
     <main> {{{ body }}}</main>
 </body>
+
+</html>

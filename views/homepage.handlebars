@@ -1,1 +1,51 @@
-<!DOCTYPE html>
+<div class="content">
+    <h1 class="heading">
+        <span class="small">welcome to the Practice Room </span>
+    </h1>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+
+
+    <button class="btn" onclick="togglelogin()">Login</button>
+
+    <div class="form-popup2" id="myForm">
+        <form action="/action_page.php" class="form-container2">
+            <h1>SignUp</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">signUp</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <button class="btn" onclick="togglesignup()">SignUp</button>
+</div>
+
+</header>
+
+
+<script>
+    var dd_main = document.querySelector(".dd_main");
+
+    dd_main.addEventListener("click", function () {
+        this.classList.toggle("active");
+    })
+</script>
