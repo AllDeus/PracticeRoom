@@ -1,115 +1,47 @@
-<html lang="en">
+<header class="subtitle">
+    <h1>Song Selector</h1>
+</header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <!------->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<!-- Container -->
+<main class="container">
 
-    <link rel="stylesheet" href="/css/songSelect.css">
+    <div class="d-flex justify-content-center">
+        <div class="card  newSongCard" style="width: 42rem;">
 
-    <title>Song Selector</title>
-</head>
+            <div>{{{song.url}}}</div>
 
+            <div>{{song.name}} by {{song.artist}}</div>
 
-<div class="wrapper">
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">Practice Room</a>
-        </div>
-        <div class="nav_right">
-            <ul>
-                <li class="nr_li dd_main">
-                    <i class="fa fa-home"></i></a>
-                    <alt>Menu</alt>
-
-                    <div class="dd_menu">
-                        <div class="dd_left">
-                            <ul>
-                                <li><i class="fas fa-map-marker-alt"></i></li>
-                                <li><i class="far fa-star"></i></li>
-                                <li><i class="far fa-plus-square"></i></li>
-                                <li><i class="fas fa-cog"></i></li>
-                                <li><i class="fas fa-sign-out-alt"></i></li>
-                            </ul>
-                        </div>
-                        <div class="dd_right">
-                            <ul>
-                                <li class="nav-item"><a href="/"></a>Home</li>
-                                <li class="nav-item"><a href="blog.html"></a>Discussion</li>
-                                <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
-                                <li class="nav-item"><a href="/"></a>SignUp</li>
-                                <li class="nav-item"><a href="/login"></a>Login</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="nr_li">
-
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+            <button href="#" class="btn btn-primary continueButton">Next</button>
         </div>
     </div>
-</div>
 
-<body>
-    <header class="subtitle">
-        <h1>Song Selector</h1>
-    </header>
+</main>
+<!-- /Container -->
 
-    <!-- Container -->
-    <main class="container">
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        <div class="d-flex justify-content-center">
-            <div class="card  newSongCard" style="width: 42rem;">
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
-                <div>{{{song.url}}}</div>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/e211982880.js" crossorigin="anonymous"></script>
 
-                <div>{{song.name}} by {{song.artist}}</div>
+<!-- Moments.js -->
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 
-                <button href="#" class="btn btn-primary continueButton">Next</button>
-            </div>
-        </div>
+<!-- Windy Map API - Leaflet Library -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
-    </main>
-    <!-- /Container -->
+<!-- Windy Map API -->
+<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Main js -->
+<script src="assets/app.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/e211982880.js" crossorigin="anonymous"></script>
-
-    <!-- Moments.js -->
-    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-
-    <!-- Windy Map API - Leaflet Library -->
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-
-    <!-- Windy Map API -->
-    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
-
-    <!-- Main js -->
-    <script src="assets/app.js"></script>
-
-
-
-</body>
-
-</html>
 
 
 <script>
@@ -120,7 +52,7 @@
     })
 </script>
 
-<script src="/js/song.js"></script>
+
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <script src="/js/song.js"></script>

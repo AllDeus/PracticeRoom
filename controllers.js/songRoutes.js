@@ -5,7 +5,9 @@ const userAuth = require('../utils/auth');
 // get songRoutes route
 router.get('/songRoutes', async (req, res) => {
 
-    res.render('song');
+    res.render('song', {
+        cssFile: "/css/songSelect.css"
+    });
 });
 
 // get songRoutes route
@@ -25,7 +27,7 @@ router.get('/songRoutes/song', async (req, res) => {
 
     let song = (await songPicker()).get({ plain: true });
 
-    res.render('youtube', { song });
+    res.render('youtube', { song, cssFile: "/css/songSelect.css" });
 });
 
 
