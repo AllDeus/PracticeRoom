@@ -30,7 +30,5 @@ router.get('/songRoutes/song', ensureAuth, async (req, res) => {
     res.render('youtube', { song, cssFile: "/css/songSelect.css" });
 });
 
-
-
 module.exports = router;
 
