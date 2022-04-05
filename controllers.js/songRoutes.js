@@ -1,18 +1,20 @@
 const router = require('express').Router();
+const { ensureAuth } = require('../utils/auth');
 const { Song } = require('../models');
-const userAuth = require('../utils/auth');
+
+
 
 // get songRoutes route
-router.get('/songRoutes', async (req, res) => {
+router.get('/songRoutes', ensureAuth, async (req, res) => {
 
     res.render('song', {
         cssFile: "/css/songSelect.css"
     });
 });
 
-// get songRoutes route
-router.get('/songRoutes/song', async (req, res) => {
 
+// get songRoutes route
+router.get('/songRoutes/song', ensureAuth, async (req, res) => {
 
 
     const songPicker = async () => {
@@ -29,7 +31,6 @@ router.get('/songRoutes/song', async (req, res) => {
 
     res.render('youtube', { song, cssFile: "/css/songSelect.css" });
 });
-
 
 
 module.exports = router;
