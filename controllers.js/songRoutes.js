@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { Song } = require('../models');
-const userAuth = require('../utils/auth');
+const { ensureAuth } = require('../utils/auth');
 
 // get songRoutes route
-router.get('/songRoutes', async (req, res) => {
+router.get('/songRoutes', ensureAuth, async (req, res) => {
 
     res.render('song', {
         cssFile: "/css/songSelect.css"
@@ -11,7 +11,7 @@ router.get('/songRoutes', async (req, res) => {
 });
 
 // get songRoutes route
-router.get('/songRoutes/song', async (req, res) => {
+router.get('/songRoutes/song', ensureAuth, async (req, res) => {
 
 
 
