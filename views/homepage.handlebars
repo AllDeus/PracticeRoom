@@ -1,9 +1,9 @@
-<div class="content">
+<div class="content header">
     <h1 class="heading">
         <span class="small">welcome to the Practice Room </span>
     </h1>
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form action="/auth/login" class="form-container login-form">
             <h1>Login</h1>
 
             <label for="email"><b>Email</b></label>
@@ -17,12 +17,15 @@
         </form>
     </div>
 
+      <a class="btn btn-outline-dark" href="/auth/google" role="button" style="text-transform:none">
+        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Login with Google
+      </a>
 
-
-    <button class="btn" onclick="togglelogin()">Login</button>
+    <button class="btn" onclick="toggleLogin()">Login</button>
 
     <div class="form-popup2" id="myForm">
-        <form action="/action_page.php" class="form-container2">
+        <form action="/auth/signup" class="form-container2 signup-form">
             <h1>SignUp</h1>
 
             <label for="email"><b>Email</b></label>
@@ -36,16 +39,11 @@
         </form>
     </div>
 
-    <button class="btn" onclick="togglesignup()">SignUp</button>
+    <button class="btn" onclick="toggleSignup()">SignUp</button>
 </div>
 
 </header>
 
 
-<script>
-    var dd_main = document.querySelector(".dd_main");
 
-    dd_main.addEventListener("click", function () {
-        this.classList.toggle("active");
-    })
-</script>
+<script src="/js/login.js"></script>
