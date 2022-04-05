@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 class User extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
-      }
+    }
 }
 // temporarily allow null?
 User.init({
@@ -44,28 +44,28 @@ User.init({
     image: {
         type: DataTypes.STRING,
     },
-    },
+},
     {
-            hooks: {
-              // check if password exists if(password)
-              beforeCreate: async (newUserData) => {
-                if(newUserData.password){
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        hooks: {
+            // check if password exists if(password)
+            beforeCreate: async (newUserData) => {
+                if (newUserData.password) {
+                    newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 }
                 return newUserData;
-              },
-              beforeUpdate: async (updatedUserData) => {
-                if(updatedUserData.password){
-                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            },
+            beforeUpdate: async (updatedUserData) => {
+                if (updatedUserData.password) {
+                    updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
                 }
                 return updatedUserData;
-              },
             },
-    sequelize, 
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user',
+        },
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user',
     })
 
-    module.exports = User;
+module.exports = User;
