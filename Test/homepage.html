@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link rel="stylesheet" href="home.css">
@@ -35,11 +37,11 @@
                         </div>
                         <div class="dd_right">
                             <ul>
-                                <li class="nav-item"><a href="/"></a>Home</li>
-                                <li class="nav-item"><a href="blog.html"></a>Discussion</li>
-                                <li class="nav-item"><a href="/meetup"></a>MeetUp</li>
-                                <li class="nav-item"><a href="/"></a>SignUp</li>
-                                <li class="nav-item"><a href="/login"></a>Login</li>
+                                <li class="nav-item"><a href="homepage.html">Home</a></li>
+                                <li class="nav-item"><a href="blog.html">Discussion</a></li>
+                                <li class="nav-item"><a href="/meetup">MeetUp</a></li>
+                                <li class="nav-item"><a href="/">SignUp</a></li>
+                                <li class="nav-item"><a href="/login">Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,8 +63,41 @@
         <h1 class="heading">
             <span class="small">welcome to the Practice Room </span>
         </h1>
-        <a href="#" class="btn">Login</a>
-        <a href="#" class="btn">SignUp</a>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+
+
+        <button class="btn" onclick="togglelogin()">Login</button>
+
+        <div class="form-popup2" id="myForm">
+            <form action="/action_page.php" class="form-container2">
+                <h1>SignUp</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">signUp</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <button class="btn" onclick="togglesignup()">SignUp</button>
     </div>
 
 </header>

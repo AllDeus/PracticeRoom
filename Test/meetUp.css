@@ -68,6 +68,7 @@
 }
 
 .navbar .dd_menu {
+    z-index: 1000;
     position: absolute;
     right: -25px;
     top: 47px;
@@ -221,7 +222,7 @@ input {
     text-transform: capitalize;
 }
 
-/* --------------- City Forcast --------------- */
+/* --------------- City  --------------- */
 .events {
     padding-left: 0px !important;
     padding-right: 0px !important;
