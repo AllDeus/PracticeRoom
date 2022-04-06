@@ -3,7 +3,6 @@ const { ensureAuth } = require('../utils/auth');
 const { Song } = require('../models');
 
 
-
 // get songRoutes route
 router.get('/songRoutes', ensureAuth, async (req, res) => {
 
@@ -13,7 +12,7 @@ router.get('/songRoutes', ensureAuth, async (req, res) => {
 });
 
 
-// get songRoutes route
+// get songRoutes/song route
 router.get('/songRoutes/song', ensureAuth, async (req, res) => {
 
 

@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/home.css">
+<main class="container">
+
+    <form method="get" class="userQuery">
+        <div class="form-group">
+            <input type="name" name="performer" class="form-control performer" aria-describedby="emailHelp"
+                placeholder="Search your favorite artist here">
+        </div>
+
+        <button type="submit" class="btn btn-primary ">Submit</button>
+
+    </form>
+
+    {{#each performers as |performer|}}
+    <div class="card  border-primary mb-3 mt-3" style="max-width: 66rem;">
+        <div class="card-header d-flex">
+            <img src="{{performer.image }}">
+
+            <div class="card-body text-primary d-flex-space-between ">
+                <div class="mb-1"> {{ performer.name }}</div>
+                <div class="mb-1">Tour Popularity score:{{ performer.score }}</div>
+                <a href="{{ performer.url }}">Click to learn more about this tour</a>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+    {{/each}}
+
+</main>
+
+<!-- /Container -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/e211982880.js" crossorigin="anonymous"></script>
+
+<!-- Moments.js -->
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+
+<!-- Windy Map API - Leaflet Library -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+<!-- Windy Map API -->
+<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+
+<!-- Main js -->
+<script src="assets/app.js"></script>
+
+
+
+</script>
+<script src="/js/seatGeek.js"></script>
