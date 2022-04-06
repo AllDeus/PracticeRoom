@@ -1,3 +1,16 @@
+<form method="post" id="postForm"></form>
+<div class="blog">
+  <textarea type="text" class="title" placeholder="Post title..."></textarea>
+  <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+</div>
+
+<div class="blog-options">
+  <button class="btn dark publish-btn">publish</button>
+  <input type="file" accept="image/*" id="image-upload" hidden>
+  <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+</div>
+</form>
+
 {{!-- TODO: change title to post --}}
 {{#each post as |post| }}
 <div class="row mb-4 post">
@@ -36,3 +49,5 @@
     this.classList.toggle("active");
   })
 </script>
+
+<script src="/js/blog.js"></script>
