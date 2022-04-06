@@ -54,14 +54,26 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
+router.get('/auth/login', async (req, res) => {
+  try {
+    res.render('login', {
+      cssFile: '/css/jass.css'
+    })
+
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render('login');
 });
+
+// router.get('/auth/login', (req, res) => {
+//   // If the user is already logged in, redirect the request to another route
+//   if (req.session.logged_in) {
+//     res.redirect('/profile');
+//     return;
+//   }
+//   cssFile: '/css/home.css'
+//   res.render('login');
+// });
 
 
 module.exports = router;
