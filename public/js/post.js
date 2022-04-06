@@ -1,15 +1,20 @@
+const postForm = document.getElementById('postForm');
+const commentForm = document.querySelector('.commentForm');
+const deletePost = document.querySelector('.deletePost');
+
+
 const handlePost = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#title').value.trim();
-    const postContent = document.querySelector('#post').value.trim();
+    const PostContent = document.querySelector('#article').value.trim();
 
-    if (title && postContent) {
+    if (title && PostContent) {
 
         // add route
-        const response = await fetch('/api/posts', {
+        const response = await fetch('/api/postsRoutes', {
             method: 'POST',
-            body: JSON.stringify({ title, postContent }),
+            body: JSON.stringify({ title, PostContent }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -29,9 +34,9 @@ const handleComment = async (event) => {
 
     if (commentContent.ok) {
         // add route
-        const response = await fetch('/api/comments', {
+        const response = await fetch('/api/commentRoutes', {
             method: 'POST',
-            body: JSON.stringify({ commentContent }),
+            body: JSON.stringify({ content }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -44,34 +49,45 @@ const handleComment = async (event) => {
     }
 };
 
-const delButtonHandler = async (event) => {
+const handleDelete = async (event) => {
     // TODO: data-id comes from handlebars-- make it post.name or something
     if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/posts/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        // TODO: might adjust homepage depending on handlebars
-        document.location.replace('/homepage');
-      } else {
-        alert('Failed to delete project');
-      }
+        const id = event.target.getAttribute('data-id');
+
+        const response = await fetch(`/api/postRoutes/${id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            // TODO: might adjust homepage depending on handlebars
+            document.location.replace('/api/postRoutes');
+        } else {
+            alert('Failed to delete project');
+        }
     }
-  };
+};
 
 
-document
-    .querySelector('.postForm')
-    .addEventListener('submit', handlePost);
 
-document
-    .querySelector('.commentForm')
-    .addEventListener('submit', handleComment);
+// handles all the event listeners
+const handleButtons = async () => {
+    const delete_buttons = document.querySelectorAll('.deleteBut');
 
-document
-// TODO: .project-list needs to be changed
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+    if (postForm) {
+        postForm.addEventListener('submit', handlePost);
+    }
+
+    if (commentForm) {
+        commentForm.addEventListener('submit', handleComment);
+    }
+
+    deletePost.forEach((deletePost) => {
+
+        deletePost.addEventListener('submit', handleDelete);
+
+    });
+
+};
+
+
+handleButtons();
