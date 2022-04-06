@@ -26,7 +26,7 @@ Post.init(
             defaultValue: DataTypes.NOW,
         },
 
-        PostContent: {
+        post_content: {
             type: DataTypes.STRING,
             allowNull: false
         },

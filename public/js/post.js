@@ -49,8 +49,12 @@ const handleComment = async (event) => {
     }
 };
 
+
+
+
 const handleDelete = async (event) => {
     // TODO: data-id comes from handlebars-- make it post.name or something
+
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 
