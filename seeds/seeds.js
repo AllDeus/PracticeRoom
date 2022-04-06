@@ -13,9 +13,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // TODO: starter for blogdata - line 16 below may need to be modified 
+  // TODO: starter for post - line 16 below may need to be modified 
   for (const blog of blogData) {
-    await blogData.create({
+    await Post.create({
       ...blog,
     });
   }

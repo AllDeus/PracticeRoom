@@ -45,7 +45,7 @@ const handleComment = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-    // TODO: data-id comes from handlebars-- make it post.name or something
+    // TODO: data-id comes from handlebars-- make it post.id or something in dashboard.handlebars I think
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
