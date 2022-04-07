@@ -8,11 +8,11 @@ const handlePost = async (event) => {
 
     const title = document.querySelector('#title').value.trim();
     const PostContent = document.querySelector('#article').value.trim();
-
+console.log(title, PostContent);
     if (title && PostContent) {
 
         // add route
-        const response = await fetch('/api/postsRoutes', {
+        const response = await fetch('/api/postRoutes', {
             method: 'POST',
             body: JSON.stringify({ title, PostContent }),
             headers: { 'Content-Type': 'application/json' },
@@ -49,8 +49,12 @@ const handleComment = async (event) => {
     }
 };
 
+
+
+
 const handleDelete = async (event) => {
     // TODO: data-id comes from handlebars-- make it post.name or something
+
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 
@@ -81,7 +85,7 @@ const handleButtons = async () => {
         commentForm.addEventListener('submit', handleComment);
     }
 
-    deletePost.forEach((deletePost) => {
+    delete_buttons.forEach((deletePost) => {
 
         deletePost.addEventListener('submit', handleDelete);
 
