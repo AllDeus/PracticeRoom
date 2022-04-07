@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -36,27 +36,56 @@ router.get('/', async (req, res) => {
 
 
 // Finds a blog post by its id so it can be rendered on a separate page if clicked on by user.
+// router.get('/post/:id', async (req, res) => {
+//   try {
+//     const postData = await Post.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['displayName'],
+//         },
+//       ],
+//     });
+
+//     const post = postData.get({ plain: true });
+
+//         res.render('practiceRoom', {
+//           ...post,
+//           logged_in: req.session.logged_in
+//         });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get('/post/:id', async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['displayName'],
-        },
-      ],
-    });
-
-    const post = postData.get({ plain: true });
-
-        res.render('practiceRoom', {
-          ...post,
-          logged_in: req.session.logged_in
-        });
-  } catch (err) {
-    res.status(500).json(err);
+      const postData = await Post.findByPk(req.params.id, {
+          include: [
+              {
+                  model: User,
+                  attributes: ['displayName', 'id'],
+              },
+              {
+                  model: Comment,
+                  attributes: ['content', 'user_id', 'date_created'],
+                  include: {
+                      model: User,
+                      attributes: ['displayName']
+                  }
+              }
+          ]
+      });
+      const post = postData.get({ plain: true });
+      res.render('post', {
+        cssFile: '/css/home.css',
+         ...post,
+       });
+  }catch(err){
+    console.log(err);
+      res.json(err);
   }
-});
+})
 
 router.get('/auth/login', async (req, res) => {
   try {
