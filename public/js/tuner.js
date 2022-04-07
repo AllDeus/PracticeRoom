@@ -1,6 +1,7 @@
 $("#violinButtons").hide()
 $("#chromButtons").hide()
 $("#celloButtons").hide()
+$("#hide").hide()
 
 $("#Violin").click(function () {
     $("#chromButtons").hide()
