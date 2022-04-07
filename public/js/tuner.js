@@ -6,6 +6,7 @@ $("#hide").hide()
 $("#Violin").click(function () {
     $("#chromButtons").hide()
     $("#celloButtons").hide()
+    $("#hide").show()
     $("#violinButtons").show()
     const audioContext = new window.AudioContext();
     const sourceAudioNode = audioContext.createOscillator();
@@ -40,6 +41,7 @@ $("#Violin").click(function () {
 $("#Chrom").click(function () {
     $("#violinButtons").hide()
     $("#celloButtons").hide()
+    $("#hide").show()
     $("#chromButtons").show()
     const audioContext = new window.AudioContext();
     const sourceAudioNode = audioContext.createOscillator();
@@ -96,6 +98,7 @@ $("#Cello").click(function() {
     $("#chromButtons").hide()
     $("#violinButtons").hide()
     $("#celloButtons").show()
+    $("#hide").show()
     const audioContext = new window.AudioContext();
     const sourceAudioNode = audioContext.createOscillator();
     sourceAudioNode.type = 'triangle';
