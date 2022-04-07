@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "title": "cool band",
+        "post_content": "Words here about band"
+    },
+    {
+        "title": "cool band2",
+        "post_content": "Words here about band2"
+    },
+    {
+        "title": "cool band3",
+        "post_content": "Words here about band3"
+    },
+    {
+        "title": "cool band4",
+        "post_content": "Words here about band4"
+    }
+]
