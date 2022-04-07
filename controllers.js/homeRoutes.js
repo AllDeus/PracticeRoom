@@ -3,7 +3,7 @@ const { User, Post } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('practiceRoom', {
+    res.render('homepage', {
       cssFile: '/css/home.css'
     })
   } catch (err) {
