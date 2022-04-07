@@ -38,11 +38,12 @@ Pull requests. Feel free to open a pull requst on my GitHub.
 
 [GitHub Repo](https://github.com/AllDeus/PracticeRoom) 
 
-[Deployed Application](/) 
+[Deployed Application](/https://git.heroku.com/immense-savannah-04794.git
+) 
 
 
 ----
 
 ## Pictures
 
-![image](./Screenshot.png)
+![image](./public/img/Screenshot.png)
