@@ -1,14 +1,14 @@
 <form method="post" id="postForm">
-<div class="blog">
-  <textarea type="text" class="title" placeholder="Post title..." id="title"></textarea>
-  <textarea type="text" class="article" placeholder="Start writing here..." id="article"></textarea>
-</div>
+  <div class="blog">
+    <textarea type="text" class="title" placeholder="Post title..." id="title"></textarea>
+    <textarea type="text" class="article" placeholder="Start writing here..." id="article"></textarea>
+  </div>
 
-<div class="blog-options">
-  <button class="btn dark publish-btn" type="submit">publish</button>
-  <input type="file" accept="image/*" id="image-upload" hidden>
-  <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
-</div>
+  <div class="blog-options">
+    <button class="btn dark publish-btn" type="submit">publish</button>
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+  </div>
 </form>
 
 {{!-- TODO: change title to post --}}
@@ -41,13 +41,5 @@
 
 </section>
 
-
-<script>
-  var dd_main = document.querySelector(".dd_main");
-
-  dd_main.addEventListener("click", function () {
-    this.classList.toggle("active");
-  })
-</script>
 
 <script src="/js/post.js"></script>
