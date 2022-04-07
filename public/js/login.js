@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
             // TODO: replace /profile with redirected page
-            document.location.replace('/profile');
+            document.location.replace('/posts');
         } else {
             alert(response.statusText);
         }
@@ -25,36 +25,26 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
     event.preventDefault();
     
-    const name = document.querySelector('#name-signup').value.trim();
+    const displayName = document.querySelector('#name-signup').value.trim();
     // username is email
     const username = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
-    if (name && username && password) {
+    if (displayName && username && password) {
         const response = await fetch('/auth/signup', {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ displayName, username, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
             // TODO: replace /profile with redirected page
-            document.location.replace('/profile');
+            document.location.replace('/posts');
         } else {
             alert(response.statusText);
         }
     }
 };
-
-const toggleSignup = () => {
-
-}
-
-const toggleLogin = () => {
-
-}
-
-
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
