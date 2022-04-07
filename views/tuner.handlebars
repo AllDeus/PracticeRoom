@@ -1,48 +1,81 @@
 <link rel="stylesheet" href="/css/home.css">
 
-<div class="container" id="byEar">
-  Tune By Ear
-  <div class="card col-sm-4">
-    <button id="Violin">Violin/Viola</button>
-    <button class="mt-1" id="Chrom">Chromatic</button>
-  </div>
-</div>
-
-<!-- buttons for violin/viola tuning by ear, hidden at start -->
-<div id="violinButtons">
-  <div class="container">
-    <div class="card col-sm-4 btn-group-vertical">
-      <button class="mt-1" id="vC">C</button>
-      <button class="mt-1" id="vG">G</button>
-      <button class="mt-1" id="vD">D</button>
-      <button class="mt-1" id="vA">A</button>
-      <button class="mt-1" id="vE">E</button>
-      <button class="mt-1" id="vStop">Stop</button>
+<div class="bg-success m-3" id="byEar">
+      <h2 class="container-fluid navbar-brand">Tune By Ear</h2>
     </div>
-  </div>
-</div>
 
-<!-- buttons for chromatic tuning by ear, hidden at start -->
-<div id="chromButtons">
-  <div class="container">
-    <div class="card col-sm-4 btn-group-vertical">
-      <button class="mt-1" id="btnA">A</button>
-      <button class="mt-1" id="btnAShrp">A#</button>
-      <button class="mt-1" id="btnB">B</button>
-      <button class="mt-1" id="btnC">C</button>
-      <button class="mt-1" id="btnCShrp">C#</button>
-      <button class="mt-1" id="btnD">D</button>
-      <button class="mt-1" id="btnDShrp">D#</button>
-      <button class="mt-1" id="btnE">E</button>
-      <button class="mt-1" id="btnF">F</button>
-      <button class="mt-1" id="btnFShrp">F#</button>
-      <button class="mt-1" id="btnG">G</button>
-      <button class="mt-1" id="btnGShrp">G#</button>
-      <button class="mt-1" id="cStop">Stop</button>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="card bg-success m-4">
+          <button id="Chrom">Use Chromatic Scale</button>
+        </div>
+
+        <div class="card bg-success m-3">
+          <h2 class="container-fluid navbar-brand">Or by Instrument:</h2>
+        </div>
+
+        <div class="card bg-success m-4">
+          <button id="Violin">Violin/Viola</button>
+        </div>
+        <div class="card bg-success m-4">
+          <button id="Cello">Cello</button>
+        </div>
+      </div>
+
+      <div id="hide" class="col-sm-6">
+        <!-- buttons for violin/viola tuning by ear, hidden at start -->
+        <div id="violinButtons">
+          <div class="container">
+            <div class="card bg-success col-sm-4">
+              <button class="mt-1" id="vStop">Stop</button>
+              <button class="mt-1" id="vHide">Hide</button>
+              <button class="mt-1" id="vC">C</button>
+              <button class="mt-1" id="vG">G</button>
+              <button class="mt-1" id="vD">D</button>
+              <button class="mt-1" id="vA">A</button>
+              <button class="mb-1 mt-1" id="vE">E</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- buttons for cello tuning by ear, hidden at start -->
+        <div id="celloButtons">
+          <div class="container">
+            <div class="card bg-success col-sm-4">
+              <button class="mt-1" id="cStop">Stop</button>
+              <button class="mt-1" id="cHide">Hide</button>
+              <button class="mt-1" id="cC">C</button>
+              <button class="mt-1" id="cG">G</button>
+              <button class="mt-1" id="cD">D</button>
+              <button class="mb-1 mt-1" id="cA">A</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- buttons for chromatic tuning by ear, hidden at start -->
+        <div id="chromButtons">
+          <div class="container">
+            <div class="card bg-success col-sm-4">
+              <button class="mt-1" id="btnStop">Stop</button>
+              <button class="mt-1" id="btnHide">Hide</button>
+              <button class="mt-1" id="btnA">A</button>
+              <button class="mt-1" id="btnAShrp">A#</button>
+              <button class="mt-1" id="btnB">B</button>
+              <button class="mt-1" id="btnC">C</button>
+              <button class="mt-1" id="btnCShrp">C#</button>
+              <button class="mt-1" id="btnD">D</button>
+              <button class="mt-1" id="btnDShrp">D#</button>
+              <button class="mt-1" id="btnE">E</button>
+              <button class="mt-1" id="btnF">F</button>
+              <button class="mt-1" id="btnFShrp">F#</button>
+              <button class="mt-1" id="btnG">G</button>
+              <button class="mb-1 mt-1" id="btnGShrp">G#</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="/assets/app.js"></script>
+{{!-- <script src="/assets/app.js"></script> --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/js/tuner.js"></script>

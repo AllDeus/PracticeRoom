@@ -1,5 +1,11 @@
+$("#violinButtons").hide()
+$("#chromButtons").hide()
+$("#celloButtons").hide()
+$("#hide").hide()
+
 $("#Violin").click(function () {
     $("#chromButtons").hide()
+    $("#celloButtons").hide()
     $("#violinButtons").show()
     const audioContext = new window.AudioContext();
     const sourceAudioNode = audioContext.createOscillator();
@@ -25,17 +31,22 @@ $("#Violin").click(function () {
     $("#vStop").click(function () {
         sourceAudioNode.frequency.value = 0
     })
+    $("#vHide").click(function () {
+        sourceAudioNode.frequency.value = 0
+        $("#violinButtons").hide()
+    })
 })
 
 $("#Chrom").click(function () {
     $("#violinButtons").hide()
+    $("#celloButtons").hide()
     $("#chromButtons").show()
     const audioContext = new window.AudioContext();
     const sourceAudioNode = audioContext.createOscillator();
     sourceAudioNode.type = 'triangle';
     sourceAudioNode.connect(audioContext.destination);
+    sourceAudioNode.start();
     sourceAudioNode.frequency.value = 0
-        sourceAudioNode.start();
     $("#btnA").click(function () {
         sourceAudioNode.frequency.value = 220
     })
@@ -72,10 +83,42 @@ $("#Chrom").click(function () {
     $("#btnGShrp").click(function () {
         sourceAudioNode.frequency.value = 415.30
     })
-    $("#cStop").click(function () {
+    $("#btnStop").click(function () {
         sourceAudioNode.frequency.value = 0
+    })
+    $("#btnHide").click(function () {
+        sourceAudioNode.frequency.value = 0
+        $("#chromButtons").hide()
     })
 })
 
-$("#violinButtons").hide()
-$("#chromButtons").hide()
+$("#Cello").click(function() {
+    $("#chromButtons").hide()
+    $("#violinButtons").hide()
+    $("#celloButtons").show()
+    const audioContext = new window.AudioContext();
+    const sourceAudioNode = audioContext.createOscillator();
+    sourceAudioNode.type = 'triangle';
+    sourceAudioNode.connect(audioContext.destination);
+    sourceAudioNode.start();
+    sourceAudioNode.frequency.value = 0
+    $("#cC").click(function () {
+        sourceAudioNode.frequency.value = 65.4
+    })
+    $("#cG").click(function () {
+        sourceAudioNode.frequency.value = 98
+    })
+    $("#cD").click(function () {
+        sourceAudioNode.frequency.value = 146.8
+    })
+    $("#cA").click(function () {
+        sourceAudioNode.frequency.value = 220
+    })
+    $("#cStop").click(function () {
+        sourceAudioNode.frequency.value = 0
+    })
+    $("#cHide").click(function () {
+        sourceAudioNode.frequency.value = 0
+        $("#celloButtons").hide()
+    })
+})
