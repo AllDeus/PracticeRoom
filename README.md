@@ -1,48 +1,75 @@
 # Practice Room
 ## Description
-Some features of this application.
-1. You can login through our site or Google.
-2. We have a tuner for different instruments.
-3. A song selector for picking new music. 
-4. Also a search feature powered by SeatGeek.com.
+
+This application is a resource/tool for music enthusiasts looking to post about music, find something new to listen to, or tune their instrument. User can create an account or use Google to sign in.
+Once signed in, the user has access to post messages, use the song selector, and the artist search feature.  The front end was created using HTML/CSS/Boostrap with Handlebars.js as the view engine. Back end was created with node.js and utilizes a mySQL database. 
+
+
+## Features
+
+* Passport.js for login authentication
+* Tuner feature - tune by ear or by specific instrument
+* Randomized song selector to discover new music
+* Artist search feature powered by SeatGeek.com
 
 ---
 
-## Table of content
+## Table of contents
 
-* [Description](#description)
+* [Pictures](#pictures)
 
 * [Usage](#usage)
+
+* [Contributors](#contributors)
 
 * [How to Contribute](#how-to-contribute)
 
 * [Links](#links)
 
-* [Pictures](#pictures)
+
+* [References](#references)
 
 ---
+## Pictures
 
+![image](./public/img/Screenshot.png)
+
+--- 
 
 ## Usage
 
-For posting about music, finding something new to listen to, or tuning your instrument   
+Once signed up and signed in, user is redirected to the `posts` page where they are able to create/view posts. Clicking `menu` at the top right of the page will reveal a dropdown navbar to navigate through the site.
+
+[Deployed heroku application](https://immense-savannah-04794.herokuapp.com/)
+
+## Contributors
+
+* [Elizabeth Berube](https://github.com/elizabethdberube)
+
+* [Angela Donati](https://github.com/a-donati)
+
+* [Marissa Flynn](https://github.com/ottercreektourism)
+
+* [Reese Hartnett](https://github.com/pasfrad)
+
+* [Michael Russiffilli](https://github.com/AllDeus)
 
 ## How to Contribute
 
-Pull requests. Feel free to open a pull requst on my GitHub.
-
+To help add functionality, or for debugging/refactoring the code, please contact one of our team members to request access as a collaborator.
 
 
 ## Links
 
-
 [GitHub Repo](https://github.com/AllDeus/PracticeRoom) 
 
-[Deployed Application](https://git.heroku.com/immense-savannah-04794.git) 
+[Deployed Application](https://immense-savannah-04794.herokuapp.com/) 
 
 
-----
+# References 
 
-## Pictures
+[Passport.js](https://www.passportjs.org/)
 
-![image](./public/img/Screenshot.png)
+[Handlebars.js](https://www.npmjs.com/package/handlebars)
+
+[SeatGeek API](http://platform.seatgeek.com/)
