@@ -1,25 +1,27 @@
 <link rel="stylesheet" href="/css/home.css">
 <main class="container">
 
+    <!-- form for search -->
     <form method="get" class="userQuery">
         <div class="form-group">
             <input type="name" name="performer" class="form-control performer" aria-describedby="emailHelp"
-                placeholder="Search your favorite artist here">
+                placeholder="Search for your favorite artist here">
         </div>
 
         <button type="submit" class="btn btn-primary ">Submit</button>
 
     </form>
 
+    <!-- search results -->
     {{#each performers as |performer|}}
     <div class="card  border-primary mb-3 mt-3" style="max-width: 66rem;">
         <div class="card-header d-flex">
             <img src="{{performer.image }}">
 
             <div class="card-body text-primary d-flex-space-between ">
-                <div class="mb-1"> {{ performer.name }}</div>
-                <div class="mb-1">Tour Popularity score:{{ performer.score }}</div>
-                <a href="{{ performer.url }}">Click to learn more about this tour</a>
+                <p class="mb-1 card-text"> {{ performer.name }}</p>
+                <p class="mb-1 card-text">Tour Popularity score:{{ performer.score }}</p>
+                <a href="{{ performer.url }}">Click to learn more about this artist</a>
             </div>
 
         </div>
