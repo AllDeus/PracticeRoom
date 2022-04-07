@@ -45,4 +45,4 @@ Pull requests. Feel free to open a pull requst on my GitHub.
 
 ## Pictures
 
-![image](./Screenshot.png)
+![image](./public/img/Screenshot.png)
