@@ -31,12 +31,12 @@ body {
 }
 
 .header {
-    margin-top: 60px;
+    margin-top: 0px;
     width: 100%;
     height: calc(100vh - 60px);
     background: url(../img/header.jpg) no-repeat center center;
     background-size: cover;
-    display: flex;
+
     justify-content: center;
     align-items: center;
 }
@@ -50,8 +50,8 @@ body {
     color: #fff;
     text-transform: capitalize;
     font-size: 80px;
-    line-height: 60px;
-    margin-bottom: 80px;
+    line-height: 200px;
+    margin-bottom: 10px;
 }
 
 .heading .small {
