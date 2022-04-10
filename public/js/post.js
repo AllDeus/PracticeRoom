@@ -8,7 +8,7 @@ const handlePost = async (event) => {
 
     const title = document.querySelector('#title').value.trim();
     const PostContent = document.querySelector('#article').value.trim();
-console.log(title, PostContent);
+    console.log(title, PostContent);
     if (title && PostContent) {
 
         // add route
