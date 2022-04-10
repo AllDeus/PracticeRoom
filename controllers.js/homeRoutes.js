@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 
       // Pass serialized data and session flag into template
       res.render('practiceRoom', { 
-        cssFile: '/css/home.css',
+        cssFile: '/css/posts.css',
         posts, 
         logged_in: req.session.logged_in
 
@@ -78,7 +78,7 @@ router.get('/post/:id', async (req, res) => {
       });
       const post = postData.get({ plain: true });
       res.render('post', {
-        cssFile: '/css/home.css',
+        cssFile: '/css/posts.css',
          ...post,
        });
   }catch(err){

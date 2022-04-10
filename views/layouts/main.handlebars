@@ -15,39 +15,69 @@
     <title>HomePage</title>
 </head>
 
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="/" class="navbar-brand">Practice Room</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          {{!-- <li class="nav-item px-2">
+            <a href="index.html" class="nav-link active">Dashboard</a>
+          </li> --}}
+          {{!-- <li class="nav-item px-2">
+            <a href="posts.html" class="nav-link">Posts</a>
+          </li> --}}
+          {{!-- <li class="nav-item px-2">
+            <a href="categories.html" class="nav-link">Categories</a>
+          </li> --}}
+            {{!-- <li class="nav-item px-2">
+                <a href="users.html" class="nav-link">Users</a>
+            </li> --}}
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-user"></i> Menu
+            </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i> Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Dashboard
+              </a>
+                <a href="/posts" class="dropdown-item">
+                <i class="fas fa-cog"></i> Posts
+              </a>
+                <a href="/songRoutes" class="dropdown-item">
+                <i class="fas fa-cog"></i> Song Selector
+              </a>
+                <a href="/tunerRoutes" class="dropdown-item">
+                <i class="fas fa-cog"></i> Tuner
+              </a>
+            </div>
+          </li>
+          {{!-- <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-user-times"></i> Logout
+            </a> --}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <body>
-    <div class="wrapper">
+    {{!-- <div class="wrapper">
         <div class="navbar">
             <div class="logo">
                 <a href="/">Practice Room</a>
             </div>
-            <div class="nav_right">
-                <ul>
-                    <li class="nr_li dd_main">
-                        <i class="fa fa-home"></i></a>
-                        <alt> Menu</alt>
-
-                        <div class="dd_menu">
-                            <div class="dd_left">
-                                <ul>
-                                    <li><i class="fas fa-map-marker-alt"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                    <li><i class="far fa-plus-square"></i></li>
-                                    <li><i class="fas fa-cog"></i></li>
-                                    <li><i class="fas fa-sign-out-alt"></i></li>
-                                </ul>
-                            </div>
-                            <div class="dd_right">
-                                <ul>
-                                    <li class="nav-item"><a href="/">Home</a></li>
-                                    <li class="nav-item"><a href="/posts">Discussion</a></li>
-                                    <li class="nav-item"><a href="/songRoutes">Song Selector</a></li>
-                                    <li class="nav-item"><a href="/tunerRoutes">Tuner</a></li>
-                                    <li class="nav-item"><a href="/api/seatGeekRoutes">Search</a></li>
-                                    <li class="nav-item"><a href="/auth/login">SignUp/Login</a></li>
-                                    <li class="nav-item"><a href="/auth/logout">Logout</a></li>
-                                </ul>
+            <div class="nav_right"> --}}
+                
                             </div>
                         </div>
                     </li>
@@ -63,13 +93,20 @@
     </div>
     <main> {{{ body }}}</main>
 
-    <script>
-        var dd_main = document.querySelector(".dd_main");
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
-        dd_main.addEventListener("click", function () {
-            this.classList.toggle("active");
-        })
-    </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    CKEDITOR.replace('editor1');
+  </script>
 
 </body>
 
