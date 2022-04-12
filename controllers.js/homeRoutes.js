@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
 
   // Get all posts and JOIN with user data
   router.get('/posts', async (req, res) => {
+    try {
       const postData = await Post.findAll({
         include: [
           {
@@ -29,9 +30,11 @@ router.get('/', async (req, res) => {
       res.render('practiceRoom', { 
         cssFile: '/css/posts.css',
         posts, 
-        logged_in: req.session.logged_in
-
+        // logged_in: req.session.logged_in
       })
+    }catch(err){
+      res.status(500).json(err)
+    }
     })
 
 

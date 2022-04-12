@@ -10,7 +10,25 @@
   </header>
 
 
-<section id="actions" class="py-4 mb-4 bg-med">
+  <div class="col-md-6">
+    <h3>Create a new post:</h3>
+    {{! form for new post }}
+    <form class="form new-post-form">
+      <div class="form-group">
+        <label for="post-name">Post title:</label>
+        <input class="form-input" type="text" id="post-title" name="post-title" />
+      </div>
+      <div class="form-group">
+        <label for="post-content">Content:</label>
+        <textarea class="form-input" id="post-content" name="post-content"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit post</button>
+      </div>
+    </form>
+  </div>
+
+{{!-- <section id="actions" class="py-4 mb-4 bg-med">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -19,7 +37,7 @@
           </a>
         </div>
         </div>
-        </section>
+        </section> --}}
 
 
 
@@ -74,27 +92,19 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form class="form new-post-form">
             <div class="form-group">
-              <label for="title" id="title">Title</label>
-              <input type="text" class="form-control">
+              <label for="post-name" id="title">Title</label>
+              <input type="text" class="form-control" id="post-title" name="post-title">
             </div>
             <div class="form-group">
-              <label for="image">Upload Image</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="image">
-                <label for="image" class="custom-file-label">Choose File</label>
-              </div>
-              <small class="form-text text-muted">Max Size 3mb</small>
+              <label for="post-content">Body</label>
+              <textarea name="post-content" class="form-control form-input" id="post-content"></textarea>
             </div>
-            <div class="form-group">
-              <label for="body" id="article">Body</label>
-              <textarea name="editor1" class="form-control"></textarea>
-            </div>
-          </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" id="postForm" data-dismiss="modal">Save Changes</button>
+          <button class="btn btn-primary" id="postForm" data-dismiss="modal" type="submit">Submit Post</button>
+          </form>
         </div>
       </div>
     </div>

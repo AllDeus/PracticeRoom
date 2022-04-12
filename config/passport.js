@@ -4,6 +4,17 @@ const User = require('../models/User');
 require('dotenv').config();
 var LocalStrategy = require('passport-local');
 
+// passport.js
+// req.session.passport.user
+// how to implement this into my passport.js
+
+// req.session.save(() => {
+//     req.session.passport.user_id = user.id;
+//     req.session.logged_in = true;
+    
+//     res.json({ user: userData, message: 'You are now logged in!' });
+//   });
+
 // catch passport - passed in from server
 module.exports = function(passport) {
     passport.use(new GoogleStrategy(
@@ -19,7 +30,7 @@ module.exports = function(passport) {
             firstName: profile.name.givenName,
             lastName: profile.name.familyName,
             image: profile.photos[0].value,
-            username: profile.email
+            username: profile.emails[0].value
         }
         // findone based on email address instead of userid
         // https://www.googleapis.com/discovery/v1/apis/oauth2/v2/rest?fields=auth(oauth2(scopes))
@@ -32,6 +43,12 @@ module.exports = function(passport) {
                 done(null, user)
             }
 
+                // req.session.passport.save(() => {
+                // req.session.passport.user_id = user.id;
+                // req.session.passport.logged_in = true;
+        
+                // res.json({ user: userData, message: 'You are now logged in!' });
+    // });
         }catch(err){
             console.error(err);
         }
@@ -49,6 +66,13 @@ module.exports = function(passport) {
                 // user = await User.create(req.body)
                 cb(null,false)
             }
+
+    //         req.session.save(() => {
+    //             req.session.passport.user_id = user.id;
+    //             req.session.logged_in = true;
+        
+    //             res.json({ user: userData, message: 'You are now logged in!' });
+    // });
         }catch(err){
             console.error(err);
         }
